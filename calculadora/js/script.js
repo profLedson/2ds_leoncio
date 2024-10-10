@@ -10,6 +10,20 @@ const divisao = document.querySelector('.divisao')
 
 //alert(numero1)
 // CRIA A FUNÇÃO CALCULAR
-
-
+function calcular(){
+    const n1 = Number(numero1.value)
+    const n2 = Number(numero2.value)
+    if(typeof n1 === 'number' 
+        && typeof n2 === 'number' ) {
+          const adicao =  `A soma de ${n1} e ${n2} = ${n1+n2}`
+          alert(adicao)
+        } else {
+            alert('Por favor, digite um número correto')
+        }
+    
+    //alert('Resultado: ' + resultado)
+}
 // ADICIONA ESCUTAR DE EVENTOS
+btnCalcular.addEventListener('click', function(){
+    calcular()
+})
