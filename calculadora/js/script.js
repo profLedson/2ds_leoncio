@@ -15,8 +15,12 @@ function calcular(){
     const n2 = Number(numero2.value)
     if(typeof n1 === 'number' 
         && typeof n2 === 'number' ) {
-          const adicao =  `A soma de ${n1} e ${n2} = ${n1+n2}`
-          alert(adicao)
+          const add =  `A soma de ${n1} e ${n2} = ${n1+n2}`
+          const div =  `A soma de ${n1} e ${n2} = ${n1/n2}`
+          const mult =  `A soma de ${n1} e ${n2} = ${n1*n2}`
+          const sub =  `A soma de ${n1} e ${n2} = ${n1-n2}`
+          //alert(add)
+           adicao.innerHTML = add
         } else {
             alert('Por favor, digite um número correto')
         }
@@ -24,6 +28,7 @@ function calcular(){
     //alert('Resultado: ' + resultado)
 }
 // ADICIONA ESCUTAR DE EVENTOS
-btnCalcular.addEventListener('click', function(){
+btnCalcular.addEventListener('click', function(evento){ 
+    evento.preventDefault() // TIRAR O COMPORTAMENTO PADRÃO 
     calcular()
 })
