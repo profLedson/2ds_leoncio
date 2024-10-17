@@ -16,11 +16,14 @@ function calcular(){
     if(typeof n1 === 'number' 
         && typeof n2 === 'number' ) {
           const add =  `A soma de ${n1} e ${n2} = ${n1+n2}`
-          const div =  `A soma de ${n1} e ${n2} = ${n1/n2}`
-          const mult =  `A soma de ${n1} e ${n2} = ${n1*n2}`
           const sub =  `A soma de ${n1} e ${n2} = ${n1-n2}`
+          const mult =  `A soma de ${n1} e ${n2} = ${n1*n2}`
+          const div =  `A soma de ${n1} e ${n2} = ${n1/n2}`
           //alert(add)
            adicao.innerHTML = add
+           subtracao.innerHTML = sub
+           multiplicacao.innerHTML = div
+           divisao.innerHTML = mult
         } else {
             alert('Por favor, digite um número correto')
         }
